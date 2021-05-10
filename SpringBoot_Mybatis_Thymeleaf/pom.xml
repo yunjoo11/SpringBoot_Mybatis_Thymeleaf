@@ -11,7 +11,7 @@
 	<groupId>com.joo</groupId>
 	<artifactId>s1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBoot_Mybatis_Tymeleaf</name>
+	<name>SpringBoot_Mybatis_Thymeleaf</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
