@@ -2,11 +2,12 @@ package com.joo.s1.board;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+@Mapper
 public interface BoardMapper {
 
 	//List
 	public List<BoardVO> getList()throws Exception;
-	
 	//count
 	public Long getTotalCount()throws Exception;
 	//select
