@@ -22,7 +22,7 @@ class NoticeMapperTest {
 		for(BoardVO boardVO:ar) {
 			System.out.println(boardVO.toString());
 		}
-		
+		System.out.println(ar.size());
 		assertNotEquals(0, ar.size());
 	}
 

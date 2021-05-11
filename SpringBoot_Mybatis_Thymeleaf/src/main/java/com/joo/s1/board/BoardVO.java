@@ -25,6 +25,7 @@ public class BoardVO {
 	private Long num;
 	private String title;
 	private String writer;
+	private String contents;
 	private Date regDate;
 	private Long hit;
 	
