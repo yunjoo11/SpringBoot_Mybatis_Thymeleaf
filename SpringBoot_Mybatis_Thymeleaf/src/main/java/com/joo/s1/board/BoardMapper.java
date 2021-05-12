@@ -3,13 +3,15 @@ package com.joo.s1.board;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+
+import com.joo.s1.util.Pager;
 @Mapper
 public interface BoardMapper {
 
 	//List
-	public List<BoardVO> getList()throws Exception;
+	public List<BoardVO> getList(Pager pager)throws Exception;
 	//count
-	public Long getTotalCount()throws Exception;
+	public Long getTotalCount(Pager pager)throws Exception;
 	//select
 	public BoardVO getSelect(BoardVO boardVO)throws Exception;
 	//Insert
