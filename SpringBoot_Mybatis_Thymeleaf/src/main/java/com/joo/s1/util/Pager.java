@@ -29,7 +29,7 @@ public class Pager {
 		
 		//2.totalCount 이용해서 totalPage 구하기
 		Long totalPage=totalCount/this.getPerPage();
-		if(totalCount%this.getCurPage()!=0) {
+		if(totalCount%this.getPerPage()!=0) {
 			totalPage++;
 		}
 		//3.totalPage 이용해서 totalBlock 수 구하기
