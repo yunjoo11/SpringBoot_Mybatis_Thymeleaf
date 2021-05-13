@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.joo.s1.board.BoardVO;
@@ -48,12 +49,16 @@ public class NoticeController {
 	@GetMapping("insert")
 	public String setInsert(Model model)throws Exception{
 		model.addAttribute("vo", new BoardVO());
-		return "board/list";
+		model.addAttribute("action", "insert");
+		return "board/form";
 	}
 	
 	@PostMapping("insert")
-	public String setInsert(BoardVO boardVO)throws Exception{
-		int result= noticeService.setInsert(boardVO);
+	public String setInsert(BoardVO boardVO, MultipartFile [] files)throws Exception{
+//		for(MultipartFile f : files) {
+//			System.out.println(f.getOriginalFilename());
+//		}
+		int result= noticeService.setInsert(boardVO, files);
 		return "redirect:./list";
 	}
 	

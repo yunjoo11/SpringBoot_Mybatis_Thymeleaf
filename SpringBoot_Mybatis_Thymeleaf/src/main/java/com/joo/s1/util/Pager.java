@@ -162,6 +162,7 @@ public class Pager {
 
 
 	public void setKind(String kind) {
+		
 		this.kind = kind;
 	}
 

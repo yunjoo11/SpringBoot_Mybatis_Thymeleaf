@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:include="/fragments/default::head(${board}+'Write')">
+<head th:include="/fragments/summernote::head(${board}+'Write')">
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
 	<!-- header  -->
@@ -18,8 +19,18 @@
 
 	</div>
 
+	
 	<!-- footer  -->
 	<footer th:replace="/fragments/default::footer"></footer>
 
+	 <!-- include summernote css/js -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	
+	<script type="text/javascript">
+		$("#contents").summernote();
+			
+			
+		
+	</script>
 </body>
 </html>
