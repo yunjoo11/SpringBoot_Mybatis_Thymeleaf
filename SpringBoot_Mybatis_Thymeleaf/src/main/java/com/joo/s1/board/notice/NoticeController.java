@@ -54,13 +54,14 @@ public class NoticeController {
 	@PostMapping("insert")
 	public String setInsert(BoardVO boardVO)throws Exception{
 		int result= noticeService.setInsert(boardVO);
-		return "redirect:./form";
+		return "redirect:./list";
 	}
 	
 	@GetMapping("update")
 	public String setUpdate(BoardVO boardVO,Model model)throws Exception{
 		boardVO= noticeService.getSelect(boardVO);
 		model.addAttribute("vo", boardVO);
+		model.addAttribute("action", "update");
 		return "board/form";
 	}
 	
