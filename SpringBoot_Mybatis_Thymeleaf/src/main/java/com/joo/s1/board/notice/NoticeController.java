@@ -29,6 +29,14 @@ public class NoticeController {
 	
 	
 	
+	@GetMapping("list")
+	public String getList(Model model,Pager pager) throws Exception{
+		List<BoardVO> ar=noticeService.getList(pager);
+		model.addAttribute("list", ar);
+		model.addAttribute("pager", pager);
+		return "board/list";
+	}
+	
 	@GetMapping("select")
 	public ModelAndView getSelect(BoardVO boardVO)throws Exception{
 		ModelAndView mv= new ModelAndView();
@@ -36,14 +44,6 @@ public class NoticeController {
 		mv.addObject("vo", boardVO);
 		mv.setViewName("board/select");
 		return mv;
-	}
-	
-	@GetMapping("list")
-	public String getList(Model model,Pager pager) throws Exception{
-		List<BoardVO> ar=noticeService.getList(pager);
-		model.addAttribute("list", ar);
-		model.addAttribute("pager", pager);
-		return "board/list";
 	}
 	
 	@GetMapping("insert")
