@@ -60,8 +60,14 @@
 					<th scope="row" th:text="${vo.num}"></th>
 					<!--@{|${board}select|}  문자열 연결시|(내부에)|-->
 					<!--parameter 전송은 @{URL주소(파라미터명=값, 파라미터명2=값2,...)}-->
-					<td><a href="#" th:href="@{select(num=${vo.num})}"
-						th:text="${vo.title}"></a></td>
+					<td>
+						<span th:unless="${board !='notice'}">--</span>
+						<a href="#" th:href="@{select(num=${vo.num})}" th:text="${vo.title}">Mark</a>
+					</td>
+					<td>
+						<span th:if="${vo.depth !=0}">--</span>
+						<a href="#" th:href="@{select(num=${vo.num})}" th:text="${vo.title}">Mark</a>
+					</td>
 					<td th:text="${vo.writer}">Otto</td>
 					<td th:text="${vo.regDate}">@mdo</td>
 					<td th:text="${vo.hit}"></td>
