@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -108,7 +109,16 @@ public class NoticeController {
 	@GetMapping("delete")
 	public String setDelete(BoardVO boardVO)throws Exception{
 		int result = noticeService.setDelete(boardVO);
-		
 		return "redirect:./list";
+	}
+	
+//	@ExceptionHandler(예외객체명.class)
+//	public String ex1() {
+//		//코드 진행
+//	}
+	@ExceptionHandler(ArithmeticException.class)
+	public String getMath(Model model) {
+		model.addAttribute("message", "수학오류발생");
+		return "error/500";
 	}
 }
