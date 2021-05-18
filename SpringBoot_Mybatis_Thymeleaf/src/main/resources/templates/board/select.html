@@ -20,7 +20,11 @@
 		<a th:href="@{./reply(num=${vo.num})}" class="btn btn-danger">Reply</a>
 		<p th:each="fileVO: ${vo.files}">
 			<!--<a th:href="@{|/upload/${board}/${fileVO.fileName}|}" th:text="${fileVO.oriName}"></a>  -->
+<<<<<<< HEAD
 			<a th:href="@{./fileDown(fileName=${fileVO.fileName},oriName=${fileVO.oriName})}" th:text="${fileVO.oriName}"></a>
+=======
+			<a th:href="@{./fileDown(fileName=${fileVO,fileName}, oriName=${fileVO.oriName})}" th:text="${fileVO.oriName}"></a>
+>>>>>>> mybatis
 		</p>
 	</div>
 
