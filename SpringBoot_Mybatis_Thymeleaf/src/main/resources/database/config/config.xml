@@ -10,8 +10,8 @@
   		<typeAlias type="com.joo.s1.board.BoardFileVO" alias="BoardFileVO"/>
   		<typeAlias type="com.joo.s1.board.notice.NoticeVO" alias="NoticeVO"/>
   		<typeAlias type="com.joo.s1.board.qna.QnaVO" alias="QnaVO"/>
-  		<typeAlias type="com.iu.s1.member.MemberVO" alias="MemberVO"/>
-  		<typeAlias type="com.iu.s1.member.MemberFileVO" alias="MemberFileVO"/>
+  		<typeAlias type="com.joo.s1.member.MemberVO" alias="MemberVO"/>
+  		<typeAlias type="com.joo.s1.member.MemberFileVO" alias="MemberFileVO"/>
   		
   		<typeAlias type="com.joo.s1.util.Pager" alias="Pager"/>
   	</typeAliases>
